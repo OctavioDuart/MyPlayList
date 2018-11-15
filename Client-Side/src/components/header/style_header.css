@@ -1,0 +1,16 @@
+header{
+    background-color: #222;
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+h1{
+    color: rgb(187, 187, 187)
+}
+
+h1:hover{
+    color: white;
+    cursor: pointer;
+}

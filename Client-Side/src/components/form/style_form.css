@@ -1,0 +1,41 @@
+#form_music{
+    margin-left: 8%
+}
+
+#form_music input {
+    margin-left: 2%
+}
+
+select {
+    margin-left: 2%
+}
+
+button {
+    margin-left: 2%;
+    height: 40px;
+    text-align: center;
+    border-radius: 20px;
+    border-color: black;
+    width: 10%;
+    color: #fff;
+    background-color: #449d44;
+    border-color: #398439;
+    background-color: green;
+}
+
+input {
+    height: 40px;
+    text-align: center;
+    border-radius: 20px;
+    border-color: black;
+}
+
+select{
+    height: 40px;
+    text-align: center;
+    border-radius: 20px;
+    border-color: black;
+    background-color: white;
+
+}
+
