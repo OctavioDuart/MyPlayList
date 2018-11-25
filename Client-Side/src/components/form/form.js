@@ -1,5 +1,5 @@
 import React , {Component} from 'react';
-import send from '../../services/requests_http';
+import send from '../../services/requests_http_post';
 import '../generic_style.css'
 import './style_form.css'
 
