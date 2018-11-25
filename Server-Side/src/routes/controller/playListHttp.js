@@ -20,6 +20,36 @@ router.post('/send/music' , (req , res) => {
 });
 
 
+router.get('/get/musics' , (req , res ) => {
+    var logAPI = new Promise(
+        function (resolve, reject) {
+           try {
+                var time = new Date();
+                var log = {
+                    message: "Request àt in route '/get/music' àt ",
+                    hour: time
+                };
+            resolve(console.log(log.message + log.hour));
+            } catch(e) {
+                var error = new Error('Error in request : ' ,e);
+                reject(error);
+            }
+        }
+    );
 
+        var getData = function () {
+            logAPI
+            .then(function () {
+                return model_play_list.find();
+            })
+            .then(function (result) {
+                return res.status(200).send(result);
+            })
+            .catch(function (error) {
+                return res.status(500).send(error);
+            });
+        }
 
+        getData();  
+})
 module.exports = app => app.use('/' , router); 
