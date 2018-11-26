@@ -11,16 +11,15 @@ select {
 }
 
 button {
-    margin-left: 2%;
-    height: 40px;
-    text-align: center;
-    border-radius: 20px;
-    border-color: black;
-    width: 10%;
     color: #fff;
-    background-color: #449d44;
-    border-color: #398439;
-    background-color: green;
+    background-color: #218838;
+    border-color: #1e7e34;
+    width: 12%;
+    height: 42px
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 input {

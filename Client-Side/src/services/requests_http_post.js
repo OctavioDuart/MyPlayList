@@ -1,17 +1,17 @@
-import address from '../config/parameters';
+import ip from '../address/address';
+import route from '../routes/route';
 import axios from 'axios'; 
 
 export default function send (data , callback) {
-    var route = address.dev_local.base + address.dev_local.port;    
     axios.post(
-        route + '/send/music' ,
+        ip + route.post,
         {data})
     .then(res => {
         if (res.status === 200){
-            callback(true); 
+            return callback(true); 
         }
          else {
-            callback(false) ; 
+            return callback(false) ; 
         }
     })
 };

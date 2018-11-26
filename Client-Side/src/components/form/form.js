@@ -1,7 +1,7 @@
 import React , {Component} from 'react';
 import send from '../../services/requests_http_post';
-import '../generic_style.css'
-import './style_form.css'
+import '../generic_style.css';
+import './style_form.css';
 
 export default class Form extends Component {
     // Criando estado dos campos
@@ -66,7 +66,8 @@ export default class Form extends Component {
                         name="album"
                         onChange={this.handleAlbum}>
                 </input>
-                <select
+                <select 
+                        style={{marginLeft: '3%' }}
                         onChange={this.handleTypeMusic}>
                     <option value="Rock">Rock</option>
                     <option value="Funk">Funk</option>
@@ -84,9 +85,9 @@ export default class Form extends Component {
                         type="text"
                         placeholder="Link"
                         name="link"
+                        style={{marginRight: '2%' }}
                         onChange={this.handleLink}></input>
-                        
-                <button >Send</button>
+                        <button >Send</button>
             </form>
         )
     }
