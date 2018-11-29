@@ -1,4 +1,4 @@
-const routers = {
+const ip = {
     local : { 
         base : 'http://localhost:',
         port :  '8000'
@@ -11,4 +11,4 @@ const routers = {
 }
 
 
-export default routers.local ; 
+export default ip.local ; 

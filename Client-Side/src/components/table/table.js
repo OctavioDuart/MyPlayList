@@ -3,6 +3,10 @@ import get from '../../services/requests_http_get';
 import '../generic_style.css';
 import './style_table.css';
 import 'bootstrap/dist/css/bootstrap.css'
+import {BootstrapTable,TableHeaderColumn} from 'react-bootstrap-table';
+import '../../../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css'
+
+
 
 
 export default class Table extends Component {
@@ -30,6 +34,7 @@ export default class Table extends Component {
         get((result) => {     
             if (result !== undefined && result !== null && result.length !== 0 ) {
                 this.setState({playlist : result});
+                console.log("Value API : " , this.state.playlist);
             } 
              else{
                  alert("No musics in Database")
@@ -39,29 +44,13 @@ export default class Table extends Component {
     };
 
     render(){
-        return(      
-            <div>    
-                <h2>Your playlist has {this.state.playlist.length} musics </h2>  
-                
-                <table>               
-                    <thead>
-                        <tr>
-                            <th>Music</th>
-                            <th>Artist</th>
-                            <th>Album</th>
-                            <th>Style</th>
-                            <th>Access</th>
-                        </tr>
-                    </thead>                   
-                    <tbody>
-                        <tr>
-                        {this.state.playlist.map(playlist =>(
-                             <td key={playlist._id}>{playlist.music}</td>                            
-                        ))}                                                                                                   
-                         </tr>     
-                    </tbody>                                 
-                </table>
-            </div>
+        return(          
+                <BootstrapTable data={this.state.playlist} keyField='_id' bordered={false} search={true} striped >
+                        <TableHeaderColumn dataField='music'>Name</TableHeaderColumn>
+                        <TableHeaderColumn dataField='single_band'>Band or Sigle</TableHeaderColumn>
+                        <TableHeaderColumn dataField='album'>Album</TableHeaderColumn>
+                        <TableHeaderColumn dataField='link'>Listen</TableHeaderColumn>
+                </BootstrapTable>
         )
     }
 };
