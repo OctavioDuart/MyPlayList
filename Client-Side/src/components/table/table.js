@@ -32,15 +32,10 @@ export default class Table extends Component {
 
     getPlayList =  () => {
         get((result) => {     
-            if (result !== undefined && result !== null && result.length !== 0 ) {
-                this.setState({playlist : result});
-                console.log("Value API : " , this.state.playlist);
-            } 
-             else{
-                 alert("No musics in Database")
-             }       
+            if (result) {
+                this.setState({playlist : result});               
                      
-        })
+        });
     };
 
     render(){
