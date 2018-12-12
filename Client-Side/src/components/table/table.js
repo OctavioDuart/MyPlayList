@@ -32,7 +32,7 @@ export default class Table extends Component {
 
     getPlayList =  () => {
         get((result) => {     
-            if (result) {
+            if (result) 
                 this.setState({playlist : result});               
                      
         });
