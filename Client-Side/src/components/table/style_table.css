@@ -3,3 +3,21 @@ h2 {
     margin-left: 35%;
 }
 
+#img-delete{
+    width: 10%;
+    margin-left: 3%;
+}
+
+#img-delete:hover{
+    cursor: pointer;
+}
+
+
+#img-update{
+    width: 8%;
+    margin-left:3%;
+}
+
+#img-update:hover{
+    cursor: pointer;
+}
